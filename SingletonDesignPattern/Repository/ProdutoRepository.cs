@@ -14,10 +14,8 @@ namespace SingletonDesignPattern.Repository
             _produtos = new List<Produto>();
         }
 
-        public static ProdutoRepository GetInstance
+        public static ProdutoRepository GetInstance()
         {
-            get
-            {
                 if (_instance != null) return _instance;
 
                 lock (SyncObj)
@@ -29,7 +27,7 @@ namespace SingletonDesignPattern.Repository
                 }
 
                 return _instance;
-            }
+            
         }
 
         public IList<Produto> GetAll()
