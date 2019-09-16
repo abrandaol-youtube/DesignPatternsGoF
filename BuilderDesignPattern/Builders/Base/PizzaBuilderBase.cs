@@ -9,11 +9,10 @@ namespace BuilderDesignPattern.Builders.Base
 
     public abstract class PizzaBuilderBase
     {
-        protected readonly Pizza Pizza;
+        protected Pizza Pizza = null;
         protected readonly ICalculaValor CalculaValor;
         protected PizzaBuilderBase(ICalculaValor calculaValor)
         {
-            Pizza = new Pizza();
             CalculaValor = calculaValor;
         }
 
@@ -25,6 +24,10 @@ namespace BuilderDesignPattern.Builders.Base
         public Pizza GetPizza()
         {
             return Pizza;
+        }
+        protected void Init()
+        {
+            Pizza = new Pizza();
         }
     }
 }

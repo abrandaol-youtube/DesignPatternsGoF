@@ -17,17 +17,20 @@ namespace BuilderDesignPattern.Builders
 
         public void PrepraraBorda(Borda borda)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void PreparaMassaSemBorda(PizzaSize pizzaSize)
         {
-            throw new NotImplementedException();
+            this.Init();
+            this.Pizza.PizzaSize = pizzaSize;
         }
 
         public void PreparaMassa(PizzaSize pizzaSize, Borda borda = null)
         {
-            throw new NotImplementedException();
+            this.Init();
+            this.Pizza.Borda = borda;
+            this.Pizza.PizzaSize = pizzaSize;
         }
 
         public void InsereIngradientes()

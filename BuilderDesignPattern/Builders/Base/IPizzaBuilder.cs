@@ -5,7 +5,7 @@
 
     public interface IPizzaBuilder
     {
-        void PrepraraBorda(Borda borda);
+        void PrepraraBorda();
         void PreparaMassa(PizzaSize pizzaSize, Borda borda = null);
         void PreparaMassaSemBorda(PizzaSize pizzaSize);
         void InsereIngradientes();

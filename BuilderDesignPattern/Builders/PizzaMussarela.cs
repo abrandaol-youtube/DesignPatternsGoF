@@ -25,6 +25,7 @@ namespace BuilderDesignPattern.Builders
 
         public void PreparaMassaSemBorda(PizzaSize pizzaSize)
         {
+            this.Init();
             this.Pizza.PizzaSize = pizzaSize;
         }
 

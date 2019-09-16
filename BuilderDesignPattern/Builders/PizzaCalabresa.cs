@@ -15,19 +15,22 @@ namespace BuilderDesignPattern.Builders
             this.Pizza.PizzaType = PizzaType.Salgada;
         }
 
-        public void PrepraraBorda(Borda borda)
+        public void PrepraraBorda()
         {
+            if(this.Pizza.Borda == null) throw new Exception("Deve ser informado o tipo de borda na preparação da massa");
             if((this.Pizza.PizzaType == PizzaType.Doce) && (this.Pizza.Borda?.BordaType != BordaType.Chocolate))
                 throw new Exception("Não é possível colocar borda de chocolae em uma pizza de calabresa");
         }
 
         public void PreparaMassa(PizzaSize pizzaSize, Borda borda = null)
         {
+            this.Init();
             this.Pizza.Borda = borda;
             this.Pizza.PizzaSize = pizzaSize;
         }
         public void PreparaMassaSemBorda(PizzaSize pizzaSize)
         {
+            this.Init();
             this.Pizza.PizzaSize = pizzaSize;
         }
 

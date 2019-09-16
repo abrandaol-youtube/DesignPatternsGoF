@@ -2,6 +2,13 @@
 
 namespace BuilderDesignPattern
 {
+    using Builders;
+    using Builders.Base;
+    using Director;
+    using Domain;
+    using Domain.ValueObject;
+    using Processors;
+
     /*
         Intenção
 
@@ -22,7 +29,30 @@ namespace BuilderDesignPattern
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello nerds!");
+            var calcValor = new CalculaValor();
+
+            IPizzaBuilder pizzaCalabresaBuilder = new PizzaCalabresa(calcValor);
+            IPizzaBuilder pizzaModaCasaBuilder = new PizzaModaCasa(calcValor);
+            IPizzaBuilder pizzaMussarelaBuilder = new PizzaModaCasa(calcValor);
+
+            var cardapioService = new CardapioServices();
+
+            cardapioService.PrepararPizzaComBorda(pizzaCalabresaBuilder, 
+                PizzaSize.Grande, new Borda { BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal });
+
+            var pizzacalabresa1 = pizzaCalabresaBuilder.GetPizza();
+
+            cardapioService.PrepararPizzaSemBorda(pizzaCalabresaBuilder, PizzaSize.Grande);
+
+            var pizzacalabresa2 = pizzaCalabresaBuilder.GetPizza();
+
+            View("Pizza 1: ", pizzacalabresa1);
+            View("Pizza 2: ", pizzacalabresa2);
+        }
+
+        public static void View(string msg, Pizza pizza)
+        {
+            Console.WriteLine($"{pizza.Sabor} / {pizza.Valor:C} / {pizza.TempoFornoMin} min / {pizza.PizzaSize.ToString()}");
         }
     }
 }
