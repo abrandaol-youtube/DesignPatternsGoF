@@ -20,12 +20,12 @@ namespace BuilderDesignPattern.Builders
             throw new NotImplementedException();
         }
 
-        public void PreparaMassSemBorda(PizzaSize pizzaSize)
+        public void PreparaMassaSemBorda(PizzaSize pizzaSize)
         {
             throw new NotImplementedException();
         }
 
-        public void PreparaMass(PizzaSize pizzaSize, Borda borda = null)
+        public void PreparaMassa(PizzaSize pizzaSize, Borda borda = null)
         {
             throw new NotImplementedException();
         }

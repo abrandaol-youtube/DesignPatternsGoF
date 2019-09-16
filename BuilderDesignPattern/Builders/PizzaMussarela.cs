@@ -18,12 +18,12 @@ namespace BuilderDesignPattern.Builders
             throw new Exception("Não é possivel colocar borda na pizza de mussarela");
         }
 
-        public void PreparaMass(PizzaSize pizzaSize, Borda borda = null)
+        public void PreparaMassa(PizzaSize pizzaSize, Borda borda = null)
         {
             if(borda != null) throw new Exception("Não é possivel colocar borda na pizza de mussarela");
         }
 
-        public void PreparaMassSemBorda(PizzaSize pizzaSize)
+        public void PreparaMassaSemBorda(PizzaSize pizzaSize)
         {
             this.Pizza.PizzaSize = pizzaSize;
         }
