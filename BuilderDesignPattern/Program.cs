@@ -18,7 +18,7 @@ namespace BuilderDesignPattern
         Vantagens do padrão Builder
 
         - O padrão builder permite ao desenvolvedor esconder detalhes de como os objetos são criados
-        - O padrão Builder permite ao desenvolvedor um grande variedade de repsoentações internas do objeto a ser construído
+        - O padrão Builder permite ao desenvolvedor um grande variedade de representações internas do objeto a ser construído
         - Cada Builder é independente de outros e do restante da aplicação
             - provê modularidade
             - simplifica a adição no novos Builders
@@ -38,8 +38,11 @@ namespace BuilderDesignPattern
 
             #region Pizza 1
 
-            cardapioService.PrepararPizzaComBorda(pizzaCalabresaBuilder,
-                PizzaSize.Grande, new Borda { BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal });
+            cardapioService.PrepararPizzaComBorda(pizzaCalabresaBuilder, PizzaSize.Grande, 
+                new Borda
+                {
+                    BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal
+                });
 
             var pizzacalabresa1 = pizzaCalabresaBuilder.GetPizza();
 
@@ -55,8 +58,11 @@ namespace BuilderDesignPattern
 
             #region Pizza 3
 
-            cardapioService.PrepararPizzaComBorda(pizzaModaCasaBuilder,
-                PizzaSize.Grande, new Borda { BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal });
+            cardapioService.PrepararPizzaComBorda(pizzaModaCasaBuilder, PizzaSize.Grande, 
+                new Borda
+                {
+                    BordaType = BordaType.Chedder, BordaSize = BordaSize.Normal
+                });
 
             var pizzaModaCasa1 = pizzaModaCasaBuilder.GetPizza();
 
