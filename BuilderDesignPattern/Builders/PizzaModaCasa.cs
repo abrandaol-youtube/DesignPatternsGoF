@@ -13,28 +13,22 @@ namespace BuilderDesignPattern.Builders
         {
         }
 
-        public void PrepraraBorda()
+        public void PrepraraBorda(Borda borda)
         {
-            if (this.Pizza.Borda == null) throw new Exception("Deve ser informado o tipo de borda na preparação da massa");
-            if ((this.Pizza.PizzaType == PizzaType.Doce) && (this.Pizza.Borda?.BordaType != BordaType.Chocolate))
-                throw new Exception("Não é possível colocar borda de chocolate em uma pizza de moda da casa");
-        }
-
-        public void PreparaMassaSemBorda(PizzaSize pizzaSize)
-        {
-            this.Init();
-            this.Pizza.PizzaSize = pizzaSize;
-        }
-
-        public void PreparaMassa(PizzaSize pizzaSize, Borda borda = null)
-        {
-            this.Init();
             this.Pizza.Borda = borda;
+        }
+
+        public void PreparaMassa(PizzaSize pizzaSize)
+        {
+            this.Init();
+
+            this.Pizza.PizzaType = PizzaType.Salgada;
             this.Pizza.PizzaSize = pizzaSize;
         }
 
         public void InsereIngradientes()
         {
+            this.Pizza.Sabor = "Moda da Casa";
             this.Pizza.IngredientesType =
                 IngredientesType.Alho |
                 IngredientesType.Calabresa |

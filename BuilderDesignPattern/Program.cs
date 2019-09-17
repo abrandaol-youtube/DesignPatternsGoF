@@ -33,21 +33,32 @@ namespace BuilderDesignPattern
 
             IPizzaBuilder pizzaCalabresaBuilder = new PizzaCalabresa(calcValor);
             IPizzaBuilder pizzaModaCasaBuilder = new PizzaModaCasa(calcValor);
-            IPizzaBuilder pizzaMussarelaBuilder = new PizzaModaCasa(calcValor);
-
+            
             var cardapioService = new CardapioServices();
 
+            #region Pizza 1
             cardapioService.PrepararPizzaComBorda(pizzaCalabresaBuilder,
                 PizzaSize.Grande, new Borda { BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal });
 
             var pizzacalabresa1 = pizzaCalabresaBuilder.GetPizza();
+            #endregion
 
+            #region Pizza 2
             cardapioService.PrepararPizzaSemBorda(pizzaCalabresaBuilder, PizzaSize.Grande);
 
             var pizzacalabresa2 = pizzaCalabresaBuilder.GetPizza();
+            #endregion
+
+            #region Pizza 3
+            cardapioService.PrepararPizzaComBorda(pizzaModaCasaBuilder,
+                PizzaSize.Grande, new Borda { BordaType = BordaType.Catupiry, BordaSize = BordaSize.Normal });
+
+            var pizzaModaCasa1 = pizzaModaCasaBuilder.GetPizza();
+            #endregion
 
             View("Pizza 1: ", pizzacalabresa1);
             View("Pizza 2: ", pizzacalabresa2);
+            View("Pizza 3: ", pizzaModaCasa1);
         }
 
         public static void View(string msg, Pizza pizza)
