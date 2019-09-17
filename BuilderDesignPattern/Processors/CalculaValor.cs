@@ -16,7 +16,7 @@ namespace BuilderDesignPattern.Processors
              *  Expressão apra calculo do valor total da pizza
              *
              *  (Total de Ingradientes x R$ 1,70) + ( o tamanho da pizza x R$ 10,00) + (se for doce mais R$ 10,00) +
-             *  (Se a borda for de chocolate é o tamanho da borda x R$ 5,00 e se for salgada x R$ 2,00)             *
+             *  (Se a borda for de chocolate é o tamanho da borda x R$ 5,00 e se for salgada x R$ 2,00)             
              */
             var valorIngredintes = totalIngradientes * 1.70;
             var valorTamanho = (int)pizza.PizzaSize * 10;

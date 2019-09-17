@@ -10,6 +10,8 @@ namespace BuilderDesignPattern
     using Processors;
 
     /*
+       Builder 
+
         Intenção
 
             - "Separar a construção de um obejto complexo de sua representação de modo que
