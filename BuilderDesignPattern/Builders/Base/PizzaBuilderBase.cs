@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BuilderDesignPattern.Builders.Base
+﻿namespace BuilderDesignPattern.Builders.Base
 {
     using Domain;
     using Processors;
@@ -11,6 +7,7 @@ namespace BuilderDesignPattern.Builders.Base
     {
         protected Pizza Pizza = null;
         protected readonly ICalculaValor CalculaValor;
+
         protected PizzaBuilderBase(ICalculaValor calculaValor)
         {
             CalculaValor = calculaValor;
@@ -25,6 +22,7 @@ namespace BuilderDesignPattern.Builders.Base
         {
             return Pizza;
         }
+
         protected void Init()
         {
             Pizza = new Pizza();

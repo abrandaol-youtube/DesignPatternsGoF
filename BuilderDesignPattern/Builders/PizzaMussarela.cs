@@ -9,11 +9,9 @@ namespace BuilderDesignPattern.Builders
 
     public sealed class PizzaMussarela : PizzaBuilderBase, IPizzaBuilder
     {
-        public PizzaMussarela(ICalculaValor calculaValor) : base(calculaValor)
-        {
-        }
+        public PizzaMussarela(ICalculaValor calculaValor) : base(calculaValor){}
 
-        public void PrepraraBorda(Borda borda)
+        public void PrepraraBorda()
         {
             throw new Exception("Não é possivel colocar borda na pizza de mussarela");
         }

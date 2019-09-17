@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BuilderDesignPattern.Director
+﻿namespace BuilderDesignPattern.Director
 {
     using Builders.Base;
     using Domain;

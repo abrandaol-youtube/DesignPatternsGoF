@@ -11,13 +11,13 @@ namespace BuilderDesignPattern.Builders
 
     public sealed class PizzaModaCasa : PizzaBuilderBase, IPizzaBuilder
     {
-        public PizzaModaCasa(ICalculaValor calculaValor) : base(calculaValor)
-        {
-        }
+        public PizzaModaCasa(ICalculaValor calculaValor) : base(calculaValor){}
 
-        public void PrepraraBorda(Borda borda)
+        public void PrepraraBorda()
         {
-            
+            if (this.Pizza.Borda == null) throw new Exception("Deve ser informado o tipo de borda na preparação da massa");
+            if ((this.Pizza.PizzaType == PizzaType.Doce) && (this.Pizza.Borda?.BordaType != BordaType.Chocolate))
+                throw new Exception("Não é possível colocar borda de chocolate em uma pizza de moda da casa");
         }
 
         public void PreparaMassaSemBorda(PizzaSize pizzaSize)
