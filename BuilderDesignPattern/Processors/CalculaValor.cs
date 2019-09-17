@@ -27,8 +27,8 @@ namespace BuilderDesignPattern.Processors
             if (pizza.Borda != null)
             {
                 valorBorda = pizza.Borda.BordaType == BordaType.Chocolate
-                    ? (5 * (int) pizza.Borda.BordaSize)
-                    : (2 * (int) pizza.Borda.BordaSize);
+                    ? (5 * (int)pizza.Borda.BordaSize)
+                    : (2 * (int)pizza.Borda.BordaSize);
             }
 
             pizza.Valor = valorIngredintes + valorTamanho + valorTipo + valorBorda;

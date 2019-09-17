@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BuilderDesignPattern.Builders
+﻿namespace BuilderDesignPattern.Builders
 {
     using Base;
     using Domain;

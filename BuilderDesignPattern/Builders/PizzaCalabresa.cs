@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BuilderDesignPattern.Builders
+﻿namespace BuilderDesignPattern.Builders
 {
     using Base;
     using Domain;
@@ -9,7 +7,9 @@ namespace BuilderDesignPattern.Builders
 
     public sealed class PizzaCalabresa : PizzaBuilderBase, IPizzaBuilder
     {
-        public PizzaCalabresa(ICalculaValor calculaValor): base(calculaValor){}
+        public PizzaCalabresa(ICalculaValor calculaValor) : base(calculaValor)
+        {
+        }
 
         public void PrepraraBorda(Borda borda)
         {
