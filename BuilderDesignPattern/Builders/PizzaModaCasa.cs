@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BuilderDesignPattern.Builders
 {
@@ -11,7 +9,9 @@ namespace BuilderDesignPattern.Builders
 
     public sealed class PizzaModaCasa : PizzaBuilderBase, IPizzaBuilder
     {
-        public PizzaModaCasa(ICalculaValor calculaValor) : base(calculaValor){}
+        public PizzaModaCasa(ICalculaValor calculaValor) : base(calculaValor)
+        {
+        }
 
         public void PrepraraBorda()
         {

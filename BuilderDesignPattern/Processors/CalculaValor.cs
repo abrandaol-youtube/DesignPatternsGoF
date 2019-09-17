@@ -21,9 +21,9 @@ namespace BuilderDesignPattern.Processors
             var valorIngredintes = totalIngradientes * 1.70;
             var valorTamanho = (int)pizza.PizzaSize * 10;
             var valorTipo = pizza.PizzaType == PizzaType.Doce ? 10 : 0;
-            var valorBorda = pizza?.Borda.BordaType == BordaType.Chocolate ? 
+            var valorBorda = pizza?.Borda.BordaType == BordaType.Chocolate ?
                 (5 * (int)pizza.Borda.BordaSize) : (2 * (int)pizza.Borda.BordaSize);
-            
+
             pizza.Valor = valorIngredintes + valorTamanho + valorTipo + valorBorda;
         }
     }

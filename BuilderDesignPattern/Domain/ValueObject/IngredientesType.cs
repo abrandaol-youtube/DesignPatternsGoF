@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BuilderDesignPattern.Domain.ValueObject
 {
@@ -11,7 +9,7 @@ namespace BuilderDesignPattern.Domain.ValueObject
         Catupiry = 2,
         Cheddar = 4,
         Cebola = 8,
-        Azeitona = 16, 
+        Azeitona = 16,
         Salame = 32,
         Tomate = 64,
         Pimentao = 128,
