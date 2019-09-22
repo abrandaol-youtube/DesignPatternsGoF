@@ -7,7 +7,7 @@ namespace FactoryMethodDesignPattern.Manager.Processors
     using Domain.Base;
     using Interfaces;
 
-    public class PaymentSlipTransactionProcessor: ProcessorBase<PaymentSlipTransaction>, ITransactionProcessor
+    public class PaymentSlipTransactionProcessor : ProcessorBase<PaymentSlipTransaction>, ITransactionProcessor
     {
         public TransactionInfo Authorize(TransactionBase transaction)
         {
@@ -23,7 +23,7 @@ namespace FactoryMethodDesignPattern.Manager.Processors
             BusinessSimulation(ref paymentSlipTransaction);
 
             return new TransactionInfo(paymentSlipTransaction.TransactionKey,
-                paymentSlipTransaction.CreateDate, paymentSlipTransaction.Amount, 
+                paymentSlipTransaction.CreateDate, paymentSlipTransaction.Amount,
                     paymentSlipTransaction.TransactionStatusType);
         }
 
@@ -35,8 +35,8 @@ namespace FactoryMethodDesignPattern.Manager.Processors
         {
             /* Autoriza se o valor estiver entre 100 e 20.000 reais e a
                     data de vencimento for maior que a data atual  */
-            if (paymentSlipTransaction.Amount >= 100 
-                && paymentSlipTransaction.Amount <= 20000 
+            if (paymentSlipTransaction.Amount >= 100
+                && paymentSlipTransaction.Amount <= 20000
                     && paymentSlipTransaction.DueDate.Date >= DateTime.UtcNow.Date)
             {
                 paymentSlipTransaction.SetStatusAuthorized();

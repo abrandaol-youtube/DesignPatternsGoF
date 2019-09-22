@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FactoryMethodDesignPattern.Manager.Processors
+﻿namespace FactoryMethodDesignPattern.Manager.Processors
 {
     using Base;
     using Domain;
@@ -36,7 +32,7 @@ namespace FactoryMethodDesignPattern.Manager.Processors
         private static void BusinessSimulation(ref DebitTransaction debitTransaction)
         {
             // Autoriza se o valor estiver entre 1 e 5.000 reais
-                    
+
             if (debitTransaction.Amount >= 1
                 && debitTransaction.Amount <= 5000)
             {

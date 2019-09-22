@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FactoryMethodDesignPattern.Manager.Processors
+﻿namespace FactoryMethodDesignPattern.Manager.Processors
 {
-    using System.Linq;
     using Base;
     using Domain;
     using Domain.Base;
@@ -48,6 +43,5 @@ namespace FactoryMethodDesignPattern.Manager.Processors
 
             crediCardTransaction.SetStatusUnauthorized();
         }
-
     }
 }

@@ -1,6 +1,5 @@
 ﻿namespace FactoryMethodDesignPattern.Manager.Processors.Interfaces
 {
-    using System.Transactions;
     using Domain;
     using Domain.Base;
 

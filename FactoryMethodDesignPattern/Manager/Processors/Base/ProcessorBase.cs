@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FactoryMethodDesignPattern.Manager.Processors.Base
 {
-    using System.Diagnostics;
     using Domain.Base;
 
     public abstract class ProcessorBase<T> where T : TransactionBase
