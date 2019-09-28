@@ -13,13 +13,13 @@
         Unauthorized = 1,
 
         /// <summary>
-        /// Não enviada para processo de autorização
-        /// </summary>
-        Pending = 2,
-
-        /// <summary>
         /// Em processo de autorização
         /// </summary>
-        InProgress = 3
+        InProgress = 2,
+
+        /// <summary>
+        /// Não enviada para processo de autorização
+        /// </summary>
+        Pending = 3,
     }
 }

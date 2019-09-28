@@ -21,11 +21,13 @@ namespace FactoryMethodDesignPattern.Domain.Base
         public Guid TransactionKey { get; }
         public DateTime CreateDate { get; }
         public double Amount { get; }
-        public TransactionStatusType TransactionStatusType { get; }
+        public TransactionStatusType TransactionStatusType { get; private set; }
 
         public bool SetStatusInProgress()
         {
             StatusTransitionValidate(TransactionStatusType.InProgress);
+
+            this.TransactionStatusType = TransactionStatusType.InProgress;
 
             return true;
         }
@@ -34,12 +36,16 @@ namespace FactoryMethodDesignPattern.Domain.Base
         {
             StatusTransitionValidate(TransactionStatusType.Authorized);
 
+            this.TransactionStatusType = TransactionStatusType.Authorized;
+
             return true;
         }
 
         public bool SetStatusUnauthorized()
         {
             StatusTransitionValidate(TransactionStatusType.Unauthorized);
+
+            this.TransactionStatusType = TransactionStatusType.Unauthorized;
 
             return true;
         }
