@@ -6,6 +6,11 @@ namespace FactoryMethodDesignPattern
     using Domain.ValueObj;
     using Manager.Factory;
 
+    /*
+     *  Define uma interface de criação de objeto, mas deixa a sua subclasse decidir qual classe de ser intânciada
+     *  É considerado um "Construtor virtual"
+     */
+
     internal class Program
     {
         private static void Main(string[] args)
