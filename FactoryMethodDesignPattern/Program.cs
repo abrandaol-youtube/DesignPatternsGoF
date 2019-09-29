@@ -7,7 +7,9 @@ namespace FactoryMethodDesignPattern
     using Manager.Factory;
 
     /*
-     *  Define uma interface de criação de objeto, mas deixa a sua subclasse decidir qual classe de ser intânciada
+     *  Factory Method
+     *
+     *  Define uma interface de criação de objeto, mas deixa a sua subclasse decidir qual classe deve ser instânciada
      *  É considerado um "Construtor virtual"
      */
 

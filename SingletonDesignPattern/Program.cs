@@ -19,6 +19,8 @@ namespace SingletonDesignPattern
 
             var repo2 = ProdutoRepository.GetInstance();
 
+            var lista3 = repo.GetAll();
+
             Console.WriteLine("Hello World!");
         }
     }
