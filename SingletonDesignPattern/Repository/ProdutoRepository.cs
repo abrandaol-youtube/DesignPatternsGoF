@@ -3,6 +3,12 @@ using SingletonDesignPattern.Domain;
 
 namespace SingletonDesignPattern.Repository
 {
+    /*
+     * Singleton
+     *
+     * Este padrão garante a existência de apenas uma instância de uma classe(um objto em memória),
+     *  mantendo um ponto global de acesso ao seu objeto.
+     */
     public sealed class ProdutoRepository
     {
         private readonly IList<Produto> _produtos;
