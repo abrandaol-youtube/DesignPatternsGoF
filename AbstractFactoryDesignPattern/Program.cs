@@ -33,13 +33,16 @@ namespace AbstractFactoryDesignPattern
 
         public static void PrintInfo(InstrumentoCordaBase instrumentoCordaBase)
         {
-            Console.WriteLine($"{instrumentoCordaBase.ObterQuantidadeCordas()} | { instrumentoCordaBase.Modelo} | {instrumentoCordaBase.InstrumentoType}");
+            Console.WriteLine($"Total cordas: {instrumentoCordaBase.ObterQuantidadeCordas()} | Modelo: { instrumentoCordaBase.Modelo} | Tipo: {instrumentoCordaBase.InstrumentoType}\n");
+
+            var index = instrumentoCordaBase.ObterQuantidadeCordas();
+
             foreach (var nota in instrumentoCordaBase.ListarNotas())
             {
-                Console.WriteLine($"{nota.Info}");
+                Console.WriteLine($"{index--}º: {nota.Info}");
             }
 
-            Console.WriteLine("------------------------");
+            Console.WriteLine("------------------------\n\n");
         }
     }
 }
