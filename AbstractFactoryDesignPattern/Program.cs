@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace AbstractFactoryDesignPattern
+{
+    internal class Program
+    {
+        private static void Main()
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
