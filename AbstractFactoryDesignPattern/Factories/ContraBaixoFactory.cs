@@ -1,14 +1,28 @@
 ﻿namespace AbstractFactoryDesignPattern.Factories
 {
+    using System;
     using AbstractFactory;
     using Domain.Base;
     using Domain.Entities;
+    using Domain.ValueObj;
+    using FactoryMethod;
 
-    public sealed class ContraBaixoFactory : InstrumentoCordaAbstractFactory
+    public sealed class ContraBaixoFactory : IInstrumentoFactoryMethod
     {
-        public override InstrumentoCordaBase CriaInstrumento(string modelo)
+        public InstrumentoCordaBase CriaInstrumento(Enum instrumentoFactoryType)
         {
-            return new ContraBaixo(modelo);
+            var contraBaixoType = (ContraBaixoType)instrumentoFactoryType;
+
+            switch (contraBaixoType)
+            {
+                case ContraBaixoType.Fender:
+                {
+                    return new ContraBaixoFender();
+                }
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }

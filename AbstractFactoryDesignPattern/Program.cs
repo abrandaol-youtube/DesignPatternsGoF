@@ -19,18 +19,16 @@ namespace AbstractFactoryDesignPattern
             var guitarrafactory = InstrumentoCordaAbstractFactory.CriaFabrica(InstrumentoType.Guitarra);
             var contraBaixoFactory = InstrumentoCordaAbstractFactory.CriaFabrica(InstrumentoType.ContraBaixo);
 
-            var violao1 = violaofactory.CriaInstrumento("Takamine Stduio");
-            var violao2 = violaofactory.CriaInstrumento("Takamine 1RE4");
-            var guitarra11 = guitarrafactory.CriaInstrumento("Ibanez GRG 350");
-            var guitarra12 = guitarrafactory.CriaInstrumento("Esp Ltd M 17 V Blk");
-            var guitarra13 = guitarrafactory.CriaInstrumento("Jackson J22");
-            var contraBaixo1 = contraBaixoFactory.CriaInstrumento("Fender");
+            var violao1 = violaofactory.CriaInstrumento(ViolaoType.Takamine1ER4);
+            var violao2 = violaofactory.CriaInstrumento(ViolaoType.TakamineStudio);
+            var guitarra1 = guitarrafactory.CriaInstrumento(GuitarraType.IbanezGRG250);
+            var guitarra2 = guitarrafactory.CriaInstrumento(GuitarraType.JacksonJ22);
+            var contraBaixo1 = contraBaixoFactory.CriaInstrumento(ContraBaixoType.Fender);
 
             PrintInfo(violao1);
             PrintInfo(violao2);
-            PrintInfo(guitarra11);
-            PrintInfo(guitarra12);
-            PrintInfo(guitarra13);
+            PrintInfo(guitarra1);
+            PrintInfo(guitarra2); 
             PrintInfo(contraBaixo1);
         }
 

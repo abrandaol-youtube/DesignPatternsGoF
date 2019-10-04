@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-
-namespace AbstractFactoryDesignPattern.Domain.Entities
+﻿namespace AbstractFactoryDesignPattern.Domain.Entities.Base
 {
-    using Base;
+    using System.Collections.Generic;
+    using Domain.Base;
     using ValueObj;
 
-    public sealed class Guitarra : InstrumentoCordaBase
+    public abstract class Violao : InstrumentoCordaBase
     {
-        public Guitarra(string modelo) : base(modelo, InstrumentoType.Guitarra, 7)
+        protected Violao(string modelo, short numeroCordas) : base(modelo, InstrumentoType.Violao, numeroCordas)
         {
         }
 
@@ -19,7 +18,6 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
             new Nota("Sol", 391.99M),
             new Nota("Si", 493.88M),
             new Nota("Mi", 329.63M),
-            new Nota("Dó", 261.63M)
         };
     }
 }

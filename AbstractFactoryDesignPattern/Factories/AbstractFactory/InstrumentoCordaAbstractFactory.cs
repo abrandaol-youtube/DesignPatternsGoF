@@ -4,12 +4,11 @@ namespace AbstractFactoryDesignPattern.Factories.AbstractFactory
 {
     using Domain.Base;
     using Domain.ValueObj;
+    using FactoryMethod;
 
     public abstract class InstrumentoCordaAbstractFactory
     {
-        public abstract InstrumentoCordaBase CriaInstrumento(string modelo);
-
-        public static InstrumentoCordaAbstractFactory CriaFabrica(InstrumentoType instrumentoType)
+        public static IInstrumentoFactoryMethod CriaFabrica(InstrumentoType instrumentoType)
         {
             switch (instrumentoType)
             {
