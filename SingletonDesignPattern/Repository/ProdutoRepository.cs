@@ -6,7 +6,7 @@ namespace SingletonDesignPattern.Repository
     /*
      * Singleton
      *
-     * Este padrão garante a existência de apenas uma instância de uma classe(um objto em memória),
+     * Este padrão garante a existência de apenas uma instância de uma classe(um objeto em memória),
      *  mantendo um ponto global de acesso ao seu objeto.
      */
     public sealed class ProdutoRepository
@@ -22,18 +22,17 @@ namespace SingletonDesignPattern.Repository
 
         public static ProdutoRepository GetInstance()
         {
-                if (_instance != null) return _instance;
+            if (_instance != null) return _instance;
 
-                lock (SyncObj)
+            lock (SyncObj)
+            {
+                if (_instance == null)
                 {
-                    if (_instance == null)
-                    {
-                        _instance = new ProdutoRepository();
-                    }
+                    _instance = new ProdutoRepository();
                 }
+            }
 
-                return _instance;
-            
+            return _instance;
         }
 
         public IList<Produto> GetAll()
