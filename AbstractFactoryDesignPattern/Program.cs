@@ -2,11 +2,14 @@
 
 namespace AbstractFactoryDesignPattern
 {
-    using System.Net;
-    using System.Runtime.InteropServices;
     using Domain.Base;
     using Domain.ValueObj;
     using Factories.AbstractFactory;
+
+    /*
+     * Provê uma interface para crição de familias de objetos relacionados ou dependentes
+     *      sem especificar a sua classe concreta
+     */
 
     internal class Program
     {
@@ -19,7 +22,7 @@ namespace AbstractFactoryDesignPattern
             var violao1 = violaofactory.CriaInstrumento("Takamine Stduio");
             var violao2 = violaofactory.CriaInstrumento("Takamine 1RE4");
             var guitarra11 = guitarrafactory.CriaInstrumento("Ibanez GRG 350");
-            var guitarra12 = guitarrafactory.CriaInstrumento("Ibanez GRG 250");
+            var guitarra12 = guitarrafactory.CriaInstrumento("Esp Ltd M 17 V Blk");
             var guitarra13 = guitarrafactory.CriaInstrumento("Jackson J22");
             var contraBaixo1 = contraBaixoFactory.CriaInstrumento("Fender");
 

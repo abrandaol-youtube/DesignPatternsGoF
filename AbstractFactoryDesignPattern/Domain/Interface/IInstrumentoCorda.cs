@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AbstractFactoryDesignPattern.Domain.Interface
 {
@@ -9,6 +7,7 @@ namespace AbstractFactoryDesignPattern.Domain.Interface
     public interface IInstrumentoCorda
     {
         IList<Nota> ListarNotas();
+
         short ObterQuantidadeCordas();
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AbstractFactoryDesignPattern.Domain.Base
 {
@@ -22,6 +20,7 @@ namespace AbstractFactoryDesignPattern.Domain.Base
         }
 
         public abstract IList<Nota> ListarNotas();
+
         public short ObterQuantidadeCordas() => NumeroCordas;
     }
 }

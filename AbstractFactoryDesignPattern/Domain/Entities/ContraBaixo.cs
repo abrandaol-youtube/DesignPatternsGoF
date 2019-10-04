@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AbstractFactoryDesignPattern.Domain.Entities
 {
@@ -15,10 +13,10 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
 
         public override IList<Nota> ListarNotas() => new List<Nota>
         {
-            new Nota("Lá", 440.00M),
-            new Nota("Ré", 293.66M),
-            new Nota("Sol", 391.99M),
-            new Nota("Si", 493.88M),
+            new Nota("Mi", 30.86M),
+            new Nota("Lá", 55.00M),
+            new Nota("Ré", 73.40M),
+            new Nota("Sol", 98.00M)
         };
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AbstractFactoryDesignPattern.Factories
+﻿namespace AbstractFactoryDesignPattern.Factories
 {
     using AbstractFactory;
     using Domain.Base;
     using Domain.Entities;
-    using Domain.Interface;
 
     public sealed class ViolaoFactory : InstrumentoCordaAbstractFactory
     {

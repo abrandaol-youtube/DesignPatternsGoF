@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AbstractFactoryDesignPattern.Domain.Entities
+﻿namespace AbstractFactoryDesignPattern.Domain.Entities
 {
     public sealed class Nota
     {
@@ -15,7 +11,5 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
             Nome = nome;
             Frequencia = frequencia;
         }
-
-
     }
 }
