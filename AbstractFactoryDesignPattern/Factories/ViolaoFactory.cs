@@ -5,14 +5,15 @@ using System.Text;
 namespace AbstractFactoryDesignPattern.Factories
 {
     using AbstractFactory;
+    using Domain.Base;
     using Domain.Entities;
     using Domain.Interface;
 
     public sealed class ViolaoFactory : InstrumentoCordaAbstractFactory
     {
-        protected override IInstrumentoCorda CriaInstrumento()
+        public override InstrumentoCordaBase CriaInstrumento(string modelo)
         {
-            return new Violao();
+            return new Violao(modelo);
         }
     }
 }

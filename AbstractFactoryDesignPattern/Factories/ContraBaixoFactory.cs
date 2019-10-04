@@ -7,13 +7,12 @@ namespace AbstractFactoryDesignPattern.Factories
     using AbstractFactory;
     using Domain.Base;
     using Domain.Entities;
-    using Domain.Interface;
 
     public sealed class ContraBaixoFactory : InstrumentoCordaAbstractFactory
     {
-        protected override IInstrumentoCorda CriaInstrumento()
+        public override InstrumentoCordaBase CriaInstrumento(string modelo)
         {
-            return new ContraBaixo();
+            return new ContraBaixo(modelo);
         }
     }
 }

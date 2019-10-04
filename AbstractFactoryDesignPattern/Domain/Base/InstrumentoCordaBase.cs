@@ -11,13 +11,14 @@ namespace AbstractFactoryDesignPattern.Domain.Base
     public abstract class InstrumentoCordaBase : IInstrumentoCorda
     {
         public InstrumentoType InstrumentoType { get; set; }
+        public string Modelo { get; set; }
+        private short NumeroCordas { get; set; }
 
-        public short NumeroCordas { get; set; }
-
-        protected InstrumentoCordaBase(InstrumentoType instrumentoType, short numeroCordas)
+        protected InstrumentoCordaBase(string modelo, InstrumentoType instrumentoType, short numeroCordas)
         {
             InstrumentoType = instrumentoType;
             NumeroCordas = numeroCordas;
+            Modelo = modelo;
         }
 
         public abstract IList<Nota> ListarNotas();

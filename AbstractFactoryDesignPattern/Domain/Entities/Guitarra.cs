@@ -9,7 +9,7 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
 
     public sealed class Guitarra : InstrumentoCordaBase
     {
-        public Guitarra() : base(InstrumentoType.Guitarra, 7)
+        public Guitarra(string modelo) : base(modelo, InstrumentoType.Guitarra, 7)
         {
         }
 

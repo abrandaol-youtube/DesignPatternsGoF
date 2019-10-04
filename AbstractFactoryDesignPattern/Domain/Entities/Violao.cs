@@ -9,7 +9,7 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
 
     public class Violao : InstrumentoCordaBase
     {
-        public Violao() : base(InstrumentoType.Violao, 6)
+        public Violao(string modelo) : base(modelo, InstrumentoType.Violao, 6)
         {
         }
 

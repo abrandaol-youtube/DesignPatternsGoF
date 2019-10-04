@@ -9,7 +9,7 @@ namespace AbstractFactoryDesignPattern.Domain.Entities
 
     public sealed class ContraBaixo : InstrumentoCordaBase
     {
-        public ContraBaixo() : base(InstrumentoType.ContraBaixo, 4)
+        public ContraBaixo(string modelo) : base(modelo, InstrumentoType.ContraBaixo, 4)
         {
         }
 

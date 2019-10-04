@@ -2,12 +2,13 @@
 
 namespace AbstractFactoryDesignPattern.Factories.AbstractFactory
 {
+    using Domain.Base;
     using Domain.Interface;
     using Domain.ValueObj;
 
     public abstract class InstrumentoCordaAbstractFactory
     {
-        protected abstract IInstrumentoCorda CriaInstrumento();
+        public abstract InstrumentoCordaBase CriaInstrumento(string modelo);
 
         public static InstrumentoCordaAbstractFactory CriaFabrica(InstrumentoType instrumentoType)
         {
