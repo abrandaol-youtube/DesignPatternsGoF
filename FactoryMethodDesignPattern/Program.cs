@@ -45,6 +45,20 @@ namespace FactoryMethodDesignPattern
                               $"{debitTransactionInfo.TransactionKey} | {debitTransactionInfo.TransactionStatusType}");
 
             #endregion
+
+            #region PaymentSlip Transaction
+
+            var paymentSlipTransactionProcessor =
+                TransactionProcessorFactory.CreateTransactionProcessor(TransactionType.PaymentSlip);
+
+            var paymentSlipTransaction = new PaymentSlipTransaction(2000, "001", "0000-0000", DateTime.Now);
+
+            var paymentSlipTransactionInfo = paymentSlipTransactionProcessor.Authorize(paymentSlipTransaction);
+
+            Console.WriteLine($"{paymentSlipTransactionInfo.Amount} | {paymentSlipTransactionInfo.CreateDate:g} | " +
+                              $"{paymentSlipTransactionInfo.TransactionKey} | {paymentSlipTransactionInfo.TransactionStatusType}");
+
+            #endregion
         }
     }
 }
